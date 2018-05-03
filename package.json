@@ -8,12 +8,12 @@
 	"scripts": {
 		"dev": "tsc --watch",
 		"compile": "tsc",
-		"build": "npm i && npm run compile",
+		"build": "yarn install && yarn compile",
 		"mocha": "mocha ./specs/*.spec.js",
-		"test": "npm run build && npm run mocha"
+		"test": "yarn build && yarn mocha"
 	},
 	"engines": {
-		"node": "^6.0.0 || ^7.0.0"
+		"node": ">=6.0.0"
 	},
 	"repository": {
 		"type": "git",
@@ -34,7 +34,7 @@
 		"gulp-util": "^3.0.7",
 		"map-stream": "0.0.6",
 		"map-stream-limit": "^1.1.0",
-		"svg2png": "^3.0.0"
+		"svg2png": "^4.1.0"
 	},
 	"devDependencies": {
 		"@types/chai": "^3.4.34",
