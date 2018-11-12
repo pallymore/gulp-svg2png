@@ -15,11 +15,12 @@
 
 import path = require('path');
 
-import gutil = require('gulp-util');
-
 const map_limit = require('map-stream-limit');
 const map = require('map-stream');
 const svg2png = require('svg2png');
+const PluginError = require('plugin-error');
+const log = require('fancy-log');
+const File = require('vinyl');
 
 import { SVG } from './lib/index';
 
@@ -37,7 +38,7 @@ class Command {
 	*/
 	private log(message: string) {
 		if (this.verbose) {
-			gutil.log(message);
+			log(message);
 		}
 	}
 
@@ -48,7 +49,7 @@ class Command {
 	*
 	*/
 	private error(message: string) {
-		throw new gutil.PluginError(PLUGIN_NAME, message);
+		throw new PluginError(PLUGIN_NAME, message);
 	}
 
 	/**
@@ -76,7 +77,7 @@ class Command {
 
 		svg2png(buffer, this.options)
 			.then((contents: Buffer) => {
-				cb(null, new gutil.File({
+				cb(null, new File({
 					base: source.base,
 					path: this.rename(source.path),
 					contents
