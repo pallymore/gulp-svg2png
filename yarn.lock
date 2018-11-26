@@ -10,6 +10,11 @@
   version "0.4.31"
   resolved "https://registry.yarnpkg.com/@types/chalk/-/chalk-0.4.31.tgz#a31d74241a6b1edbb973cf36d97a2896834a51f9"
 
+"@types/fancy-log@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@types/fancy-log/-/fancy-log-1.3.0.tgz#a61ab476e5e628cd07a846330df53b85e05c8ce0"
+  integrity sha512-mQjDxyOM1Cpocd+vm1kZBP7smwKZ4TNokFeds9LV7OZibmPJFEzY3+xZMrKfUdNT71lv8GoCPD6upKwHxubClw==
+
 "@types/gulp-util@^3.0.30":
   version "3.0.34"
   resolved "https://registry.yarnpkg.com/@types/gulp-util/-/gulp-util-3.0.34.tgz#d1291ebf706d93f46eb8df11344bbfd96247697e"
@@ -30,6 +35,18 @@
 "@types/node@^7.0.4":
   version "7.0.63"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.63.tgz#e60fb43e864b888798acfab3c02e312f4b5362bd"
+
+"@types/plugin-error@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@types/plugin-error/-/plugin-error-0.1.0.tgz#47e8efd62ccdf6c495f7154c3033e1360353c882"
+  integrity sha512-iFWVbyq1mvC3YuFhJMyToA1GXEbvRWoOFIWZXZZ6fd8Qm5b0Qs62i6evnoHcPXXcQgXq8r2RaXQrdXZC/IsTiQ==
+
+"@types/svg2png@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@types/svg2png/-/svg2png-4.1.0.tgz#c80524f0e848246f523075f3d6409697285726dc"
+  integrity sha512-02AE1ye4msvqVHCm2kMTuUr8VGytZ0w1S6aPf0nAwTzX+EgmJ3ERYLrij6HSh9FVEqV6putkRjUFjRNiht2Oig==
+  dependencies:
+    "@types/node" "*"
 
 "@types/through2@*", "@types/through2@^2.0.32":
   version "2.0.33"

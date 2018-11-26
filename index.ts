@@ -11,18 +11,16 @@
  *
  */
 
-'use strict';
-
+import File = require('vinyl');
+import log = require('fancy-log');
 import path = require('path');
+import PluginError = require('plugin-error');
+import svg2png = require('svg2png');
+
+import { SVG } from './lib/index';
 
 const map_limit = require('map-stream-limit');
 const map = require('map-stream');
-const svg2png = require('svg2png');
-const PluginError = require('plugin-error');
-const log = require('fancy-log');
-const File = require('vinyl');
-
-import { SVG } from './lib/index';
 
 const PLUGIN_NAME = require('./package.json').name;
 
