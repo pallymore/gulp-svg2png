@@ -16,7 +16,8 @@
 import fs = require('fs');
 import os = require('os');
 import path = require('path');
-import gutil = require('gulp-util');
+
+const File = require('vinyl');
 
 var imagesize = require('imagesize');
 
@@ -71,7 +72,7 @@ export default class Helper {
      *
      */
 	static createTestFile(): any {
-		return new gutil.File({
+		return new File({
 			cwd: './specs/assets/',
 			base: './specs/assets/',
 			path: './specs/assets/twitter.svg',
