@@ -19,22 +19,18 @@ import Helper from './helper';
 var expect = require('chai').expect;
 var svg2png = require('../');
 
-describe('The "gulp-svg2png" plugin', () => {
+describe.only('The "gulp-svg2png" plugin', () => {
 	it('should convert a SVG to a PNG', done => {
 		const filename = 'twitter.svg';
 		const stream = svg2png();
 		const image = Helper.createTestFile();
 
 		stream.on('data', (png: any) => {
-			expect(png.path).to.equal('./specs/assets/twitter.png');
+			expect(png.path).to.equal('specs/assets/twitter.png');
 			expect(Helper.isPNG(png.contents)).to.equal(true);
 
 			done();
 		});
-
-		stream.on('error', (err: Error) =>
-			console.error(err)
-		);
 
 		stream.write(image);
 		stream.end();
