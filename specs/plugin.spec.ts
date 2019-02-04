@@ -19,7 +19,7 @@ import Helper from './helper';
 var expect = require('chai').expect;
 var svg2png = require('../');
 
-describe.only('The "gulp-svg2png" plugin', () => {
+describe('The "gulp-svg2png" plugin', () => {
 	it('should convert a SVG to a PNG', done => {
 		const filename = 'twitter.svg';
 		const stream = svg2png();
