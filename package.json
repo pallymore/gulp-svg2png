@@ -32,7 +32,7 @@
 	},
 	"homepage": "https://github.com/ryanwholey/gulp-svg2png",
 	"dependencies": {
-		"map-stream": "0.0.6",
+		"map-stream": "0.1.0",
 		"map-stream-limit": "^1.1.0"
 	},
 	"devDependencies": {
